@@ -1,12 +1,5 @@
-function findClosestValueInBst(tree, target) {
+function isValidSubsequence(array, sequence) {
     // Write your code here.
 }
 
-// This is the class of the input tree. Do not edit.
-class BST {
-    constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
-    }
-}
+console.log("hello");
