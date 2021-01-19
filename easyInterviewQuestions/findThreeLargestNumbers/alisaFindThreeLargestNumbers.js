@@ -7,8 +7,8 @@ function findThreeLargestNumbers(array) {
     } else {
       for (let j = 0; j < largest.length; j++) {
         if (array[i] > largest[j]) {
-          largest.splice(j, 1, array[i])
-          array.splice(i, 1)
+          largest.sort((a, b) => a - b).splice(j, 1, array[i])
+          break;
         }
       }
     }
