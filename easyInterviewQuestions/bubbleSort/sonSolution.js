@@ -1,5 +1,5 @@
 function bubbleSort(array) {
-    const sorted = array.slice(0, array.length);
+    const sorted = [...array]
     for (let i = 0; i < sorted.length-1; i++) {
         if(sorted[i] > sorted[i +1]){
             const temp = sorted[i];
