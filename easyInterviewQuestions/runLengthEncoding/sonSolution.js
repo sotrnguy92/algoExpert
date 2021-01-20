@@ -9,7 +9,6 @@ function runLengthEncoding(string) {
         }else if(string[i] === encoding[encoding.length-1][1]){
             count++;
             encoding[encoding.length-1] = count.toString()+string[i];
-            console.log(encoding)
         }
     }
     return encoding.join("");

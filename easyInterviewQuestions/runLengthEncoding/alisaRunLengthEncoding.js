@@ -10,9 +10,11 @@ function runLengthEncoding(string) {
     }
     if (string[i] !== string[i+1]) {
       for (const [key, value] of Object.entries(hash)) {
+        console.log(hash)
         if (value > 9) {
           for (let i = value; i > 0; i -= 9) {
             (i < 9) ? arr.push(`${i}${key}`) : arr.push(`9${key}`);
+            console.log(i);
           }
         } else {
           arr.push(`${value}${key}`);
@@ -24,6 +26,6 @@ function runLengthEncoding(string) {
   return arr.join('');
 }
 
-const string = "AAABBAABCCCCCCCCCCCCCCCCCCCCCCCCCDDD"
+const string = "AAAAAAAAAAAAABBAABCCCCCCCCCCCCCCCCCCCCCCCCCDDD"
 
 console.log(runLengthEncoding(string));
