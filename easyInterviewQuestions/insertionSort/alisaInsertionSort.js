@@ -8,8 +8,10 @@ function insertionSort(array) {
       for (let j = insertion.length - 1; j > -1; j--) {
         if (insertion[j] > array[i]) {
           insertion.splice(j, 2, array[i], insertion[j]);
+          console.log("in first if", insertion)
         } else {
           insertion.splice(j, 2, insertion[j], array[i]);
+          console.log("in the else", insertion)
           break;
         }
       }
