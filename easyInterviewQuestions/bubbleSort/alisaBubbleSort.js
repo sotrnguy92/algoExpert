@@ -8,7 +8,7 @@ function bubbleSort(array) {
   }
   if (bubble.join('') === array.join('')) {
     return bubble;
-    } else {
+  } else {
     return bubbleSort(array)
   }
 
