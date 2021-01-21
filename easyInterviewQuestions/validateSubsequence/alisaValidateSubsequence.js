@@ -7,11 +7,10 @@ function isValidSubsequence(array, sequence) {
 		}
 	}
 	for (let i = 0; i < sequence.length; i++) {
-		if (sequence[i] === sharedArr[i]) {
-			continue;
-		} else {
+		if (sequence[i] !== sharedArr[i]) {
 			return false;
 		}
 	}
 	return true;
 }
+
