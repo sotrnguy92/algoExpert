@@ -3,14 +3,14 @@ function classPhotos(redShirtHeights, blueShirtHeights) {
   let sortedBlue = blueShirtHeights.sort((a,b) => a-b)
   let redTaller, blueTaller;
   for (let i = 0; i < sortedRed.length; i++) {
-    (sortedRed[i] < sortedBlue[i]) ? redTaller = true : redTaller = false;
-    if (redTaller === false) {
+    (sortedRed[i] < sortedBlue[i]) ? blueTaller = true : blueTaller = false;
+    if (blueTaller === false) {
       break;
     }
   }
   for (let i = 0; i < sortedRed.length; i++) {
-    (sortedBlue[i] < sortedRed[i]) ? blueTaller = true : blueTaller = false;
-    if (blueTaller === false) {
+    (sortedBlue[i] < sortedRed[i]) ? redTaller = true : redTaller = false;
+    if (redTaller === false) {
       break;
     }
   }
