@@ -1,12 +1,17 @@
-function findClosestValueInBst(tree, target) {
-    // Write your code here.
-}
+function findClosestValueInBst(tree, target, closest=tree.value) {
+    const currentDiff = tree.value - target;
 
-// This is the class of the input tree. Do not edit.
-class BST {
-    constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
+    let closestNum = closest
+
+    if(Math.abs(currentDiff) < Math.abs(target-closest)){
+        closestNum = tree.value
+    }
+
+    if (tree.left !== null && currentDiff > 0){
+        return findClosestValueInBst(tree.left, target, closestNum)
+    }else if (tree.right !== null && currentDiff < 0){
+        return findClosestValueInBst(tree.right, target, closestNum)
+    }else{
+        return closestNum
     }
 }
