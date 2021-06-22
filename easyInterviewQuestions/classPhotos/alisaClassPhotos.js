@@ -1,8 +1,7 @@
 function classPhotos(redShirtHeights, blueShirtHeights) {
   let sortedRed = redShirtHeights.sort((a,b) => a-b)
   let sortedBlue = blueShirtHeights.sort((a,b) => a-b)
-  let redTaller = false;
-  let blueTaller = false;
+  let redTaller, blueTaller;
   for (let i = 0; i < sortedRed.length; i++) {
     (sortedRed[i] < sortedBlue[i]) ? redTaller = true : redTaller = false;
     if (redTaller === false) {
