@@ -13,11 +13,11 @@ class Node {
         return this;
     }
 
-    depthFirstSearch(array, node = this) {
-        array.push(node.name);
-        if(node.children){
-            for (let i = 0; i < node.children.length; i++){
-                this.depthFirstSearch(array, node.children[i]);
+    depthFirstSearch(array, currentNode = this) {
+        array.push(currentNode.name);
+        if(currentNode.children){
+            for (let i = 0; i < currentNode.children.length; i++){
+                this.depthFirstSearch(array, currentNode.children[i]);
             }
         }
         return array;
