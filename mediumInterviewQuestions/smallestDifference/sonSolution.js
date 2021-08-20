@@ -19,8 +19,6 @@ function smallestDifference(arrayOne, arrayTwo) {
             }
         }
     }
-    console.log(arrayOne)
-    console.log(arrayTwo)
 
     return [firstMin, secondMin]
 }
